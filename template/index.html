@@ -9,101 +9,55 @@
   			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   			crossorigin="anonymous">
   	</script>
-<style>
-	.calcbox{
-		/* border: 2px solid red; */
-		width: fit-content;
-		padding: 12px;
-		padding-top: 10px;
-		border-radius: 12px;
-		padding-bottom: 12px;
-		background-color: rgb(31, 30, 30);
-		margin: auto;}
-	td{
-		width: 120px !important;
-		height: 90px !important;
-		padding: 5px;
-	}
-	.btn{
-		width: 100%;
-		height: 100%;
-		font-size: 35px;
-		border: 2px solid rgb(100, 100, 100);
-		border-top: 1px solid grey;
-		border-left: 1px solid grey;
-		box-shadow: 1px 2px 2px rgb(187, 187, 187);
-	}
-	.btn:hover{
-		border: 1px solid grey;
-		box-shadow: 0;
-	}
-	.rbox{
-		width: 95%;
-		margin-left: 12px;
-		margin-top: 12px;
-		height: 90px;
-		font-size: 35px;
-		border-radius: 10px;
-	}
-	.keypad{
-		/* border: 2px solid green; */
-		border-radius: 15px;
-		width: 95%;
-		background-color: rgb(52, 65, 77);
-		margin-bottom: 12px;
-		}
-</style>
 </head>
 <body>
-<div class="container">
-	<div class="jumbotron">
-		<h2 class="display-2">Calculator App</h2>
-		<p class="lead">This is a simple calculator application developed by <b>अभिषेक </b> TIWARI.</p>
-		<hr class="my-4">
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="display-3">Calculator App</h1>
+			<p class="lead">This is a simple calculator application developed by Cavin Dsouza.</p>
+			<hr class="my-4">
+		</div>
+
+
+		<textarea id="resultArea" readonly rows="3" cols="21"></textarea>
+
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><button id="clrTxt" class="btn btn-danger">C</button></td>
+				<td><button id="del" class="btn btn-default">&#9746;</button></td>
+			</tr>
+
+			<tr>
+				<td><button id="num7" class="btn btn-default">7</button></td>
+				<td><button id="num8" class="btn btn-default">8</button></td>
+				<td><button id="num9" class="btn btn-default">9</button></td>
+				<td><button id="op3" class="btn btn-default">&div;</button></td>
+			</tr>
+
+			<tr>
+				<td><button id="num4" class="btn btn-default">4</button></td>
+				<td><button id="num5" class="btn btn-default">5</button></td>
+				<td><button id="num6" class="btn btn-default">6</button></td>
+				<td><button id="op2" class="btn btn-default">&times;</button></td>
+			</tr>
+
+			<tr>
+				<td><button id="num1" class="btn btn-default">1</button></td>
+				<td><button id="num2" class="btn btn-default">2</button></td>
+				<td><button id="num3" class="btn btn-default">3</button></td>
+				<td><button id="op1" class="btn btn-default">&minus;</button></td>
+			</tr>
+
+			<tr>
+				<td><button id="decp" class="btn btn-default">.</button></td>
+				<td><button id="num0" class="btn btn-default">0</button></td>
+				<td><button id="eq" class="btn btn-default">=</button></td>
+				<td><button id="op0" class="btn btn-default">&plus;</button></td>
+			</tr>
+		</table>
 	</div>
-
-		<div class="calcbox">
-			<textarea id="resultArea" class="rbox"> </textarea>
-			<div id="opac"></div>
-			<table class="keypad">
-				<tr>
-					<td></td>
-					<td></td>
-					<td><button id="clrTxt" class="btn btn-danger">C</button></td>
-					<td><button id="del" class="btn btn-default"><i class="material-icons" style="color:red">backspace</i></button></td>
-				</tr>
-
-				<tr>
-					<td><button id="num7" class="btn btn-default">7</button></td>
-					<td><button id="num8" class="btn btn-default">8</button></td>
-					<td><button id="num9" class="btn btn-default">9</button></td>
-					<td><button id="op3" class="btn btn-default">&div;</button></td>
-				</tr>
-
-				<tr>
-					<td><button id="num4" class="btn btn-default">4</button></td>
-					<td><button id="num5" class="btn btn-default">5</button></td>
-					<td><button id="num6" class="btn btn-default">6</button></td>
-					<td><button id="op2" class="btn btn-default">&times;</button></td>
-				</tr>
-
-				<tr>
-					<td><button id="num1" class="btn btn-default">1</button></td>
-					<td><button id="num2" class="btn btn-default">2</button></td>
-					<td><button id="num3" class="btn btn-default">3</button></td>
-					<td><button id="op1" class="btn btn-default">&minus;</button></td>
-				</tr>
-
-				<tr>
-					<td><button id="decp" class="btn btn-default">.</button></td>
-					<td><button id="num0" class="btn btn-default">0</button></td>
-					<td><button id="eq" class="btn btn-default">=</button></td>
-					<td><button id="op0" class="btn btn-default">&plus;</button></td>
-				</tr>
-			</table>
-	</div>
-</div>
-
 	<script type="text/javascript" src="{% static "js/calc.js" %}"></script>
 </body>
 </html>
